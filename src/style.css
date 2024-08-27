@@ -1,1 +1,19 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #ffffff;
+  font-size: 50px;
+}
+#excuse {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.contenedor {
+  padding: 20px;
+  text-align: center;
+}

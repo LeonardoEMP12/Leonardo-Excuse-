@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <link href="style.css" />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+  <body onload="generarExcusa()">
+    <div class="contenedor">
+      <h1>OMG! you will not believe me but...</h1>
+      <p id="invento">Mi tiburon se comio mi tarea</p>
+      <div id="excuse"></div>
+      <script>
+        function generarExcusa() {
+          let sujetos = ["The dog", "My grandma", "The mailman", "My bird"];
+          let acciones = ["ate", "peed", "crushed", "broke"];
+          let objetos = ["my homework", "my phone", "the car"];
+          let lugares = [
+            "before the class",
+            "when I was sleeping",
+            "while I was exercising",
+            "during my lunch",
+            "while I was praying"
+          ];
+
+          let sujeto = sujetos[Math.floor(Math.random() * sujetos.length)];
+          let accion = acciones[Math.floor(Math.random() * acciones.length)];
+          let objeto = objetos[Math.floor(Math.random() * objetos.length)];
+          let lugar = lugares[Math.floor(Math.random() * lugares.length)];
+
+          return `${sujeto} ${accion} ${objeto} ${lugar}.`;
+        }
+
+        document.getElementById("excuse").innerHTML = generarExcusa();
+      </script>
     </div>
   </body>
 </html>
